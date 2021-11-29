@@ -1,0 +1,584 @@
+<html>
+	<head>
+		<title>
+			Spotify
+		</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="spotify.css">
+		</head>
+	<body style="overflow:hidden;font-family:arial;" >	
+		<div class="container">
+			<div class="navbar">
+				<div class="navitems">
+					<img src="images/spotify.png" style=" height:20px;cursor:none;"></img>
+				</div>
+				<div class="navitems">
+					<p onclick="playlist(0)"> Home</p>
+				</div>
+				<div class="navitems">
+					<p> PlayList</p>
+				</div>
+				<div class="navitems_searchbar">					
+					<input id="search" autocomplete="off" type="text" spellcheck="false"  placeholder="Search" style="padding-left: 12px;"></input>					
+				</div>
+			</div>
+			
+			<div class="playlist">
+					
+				<div class="songs">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (a)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0)" onmouseleave="reset_padding(0)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0)" onmouseleave="reset_padding(0)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0)"></img>
+							<audio onended="newsong(1)" class="gaana">
+								<source src="songs/1.mpeg" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1)" onmouseleave="reset_padding(1)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1)" onmouseleave="reset_padding(1)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1)"></img>
+							<audio onended="newsong(2)" class="gaana">
+								<source src="songs/2.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2)" onmouseleave="reset_padding(2)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2)" onmouseleave="reset_padding(2)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2)"></img>
+							<audio onended="newsong(3)" class="gaana">
+								<source src="songs/3.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3)" onmouseleave="reset_padding(3)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3)" onmouseleave="reset_padding(3)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3)"></img>
+							<audio onended="newsong(4)" class="gaana">
+								<source src="songs/4.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4)" onmouseleave="reset_padding(4)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4)" onmouseleave="reset_padding(4)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4)"></img>
+							<audio onended="newsong(5)" class="gaana">
+								<source src="songs/5.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5)" onmouseleave="reset_padding(5)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5)" onmouseleave="reset_padding(5)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5)"></img>
+							<audio onended="newsong(6)" class="gaana">
+								<source src="songs/6.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6)" onmouseleave="reset_padding(6)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6)" onmouseleave="reset_padding(6)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6)"></img>
+							<audio onended="newsong(7)" class="gaana">
+								<source src="songs/7.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!-- second part-->
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (b)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(7)" onmouseleave="reset_padding(7)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(7)" onmouseleave="reset_padding(7)">Main phir Bhi Tumko Chahunga..</p>
+							<img class="play" src="images/play.png" onclick="play(7)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(7)"></img>
+							<audio onended="newsong(8)" class="gaana">
+								<source src="songs/8.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(8)" onmouseleave="reset_padding(8)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(8)" onmouseleave="reset_padding(8)">Baarish Ki Dhun</p>
+							<img class="play" src="images/play.png" onclick="play(8)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(8)"></img>
+							<audio onended="newsong(9)" class="gaana">
+								<source src="songs/9.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(9)" onmouseleave="reset_padding(9)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(9)" onmouseleave="reset_padding(9)">Kushi Jab Teri</p>
+							<img class="play" src="images/play.png" onclick="play(9)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(9)"></img>
+							<audio onended="newsong(10)" class="gaana">
+								<source src="songs/10.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(10)" onmouseleave="reset_padding(10)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(10)" onmouseleave="reset_padding(10)">Sanam Re .. Sanam Re.. </p>
+							<img class="play" src="images/play.png" onclick="play(10)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(10)"></img>
+							<audio onended="newsong(11)" class="gaana">
+								<source src="songs/11.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(11)" onmouseleave="reset_padding(11)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(11)" onmouseleave="reset_padding(11)">Sine se tere sar Ko lagake sunti main rahun naam apna </p>
+							<img class="play" src="images/play.png" onclick="play(11)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(11)"></img>
+							<audio onended="newsong(12)" class="gaana">
+								<source src="songs/12.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(12)" onmouseleave="reset_padding(12)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(12)" onmouseleave="reset_padding(12)">Bekhayali...</p>
+							<img class="play" src="images/play.png" onclick="play(12)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(12)"></img>
+							<audio onended="newsong(13)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(13)" onmouseleave="reset_padding(13)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(13)" onmouseleave="reset_padding(13)">Tujhe Kitna Chahne Lage Hum</p>
+							<img class="play" src="images/play.png" onclick="play(13)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(13)"></img>
+							<audio onended="newsong(14)" class="gaana">
+								<source src="songs/14.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!-- third part-->
+				
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (c)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+14)" onmouseleave="reset_padding(0+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+14)" onmouseleave="reset_padding(0+14)">Tujhe Kitna Chahne Aur Hum</p>
+							<img class="play" src="images/play.png" onclick="play(0+14)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+14)"></img>
+							<audio onended="newsong(15)" class="gaana">
+								<source src="songs/15.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+14)" onmouseleave="reset_padding(1+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+14)" onmouseleave="reset_padding(1+14)">jeena Jeena..</p>
+							<img class="play" src="images/play.png" onclick="play(1+14)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+14)"></img>
+							<audio onended="newsong(16)" class="gaana">
+								<source src="songs/16.webm" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+14)" onmouseleave="reset_padding(2+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+14)" onmouseleave="reset_padding(2+14)">Zinda Hu To ...</p>
+							<img class="play" src="images/play.png" onclick="play(2+14)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+14)"></img>
+							<audio onended="newsong(17)" class="gaana">
+								<source src="songs/17.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+14)" onmouseleave="reset_padding(3+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+14)" onmouseleave="reset_padding(3+14)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+14)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+14)"></img>
+							<audio onended="newsong(18)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+14)" onmouseleave="reset_padding(4+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+14)" onmouseleave="reset_padding(4+14)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4+14)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4+14)"></img>
+							<audio onended="newsong(19)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+14)" onmouseleave="reset_padding(5+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+14)" onmouseleave="reset_padding(5+14)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+14)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+14)"></img>
+							<audio onended="newsong(20)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+14)" onmouseleave="reset_padding(6+14)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+14)" onmouseleave="reset_padding(6+14)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+14)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+14)"></img>
+							<audio onended="newsong(21)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!-- fourth part-->
+				
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (d)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+21)" onmouseleave="reset_padding(0+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+21)" onmouseleave="reset_padding(0+21)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0+21)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+21)"></img>
+							<audio onended="newsong(22)" class="gaana">
+								<source src="songs/13.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+21)" onmouseleave="reset_padding(1+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+21)" onmouseleave="reset_padding(1+21)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1+21)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+21)"></img>
+							<audio onended="newsong(23)" class="gaana">
+								<source src="songs/23.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+21)" onmouseleave="reset_padding(2+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+21)" onmouseleave="reset_padding(2+21)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2+21)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+21)"></img>
+							<audio onended="newsong(24)" class="gaana">
+								<source src="songs/24.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+21)" onmouseleave="reset_padding(3+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+21)" onmouseleave="reset_padding(3+21)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+21)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+21)"></img>
+							<audio onended="newsong(25)" class="gaana">
+								<source src="songs/25.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+21)" onmouseleave="reset_padding(4+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+21)" onmouseleave="reset_padding(4+21)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4)"></img>
+							<audio onended="newsong(26)" class="gaana">
+								<source src="songs/26.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+21)" onmouseleave="reset_padding(5+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+21)" onmouseleave="reset_padding(5+21)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+21)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+21)"></img>
+							<audio onended="newsong(27)" class="gaana">
+								<source src="songs/27.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+21)" onmouseleave="reset_padding(6+21)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+21)" onmouseleave="reset_padding(6+21)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+21)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+21)"></img>
+							<audio onended="newsong(28)" class="gaana">
+								<source src="songs/28.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!--5th part-->
+				
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (e)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+28)" onmouseleave="reset_padding(0+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+28)" onmouseleave="reset_padding(0+28)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0+28)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+28)"></img>
+							<audio onended="newsong(29)" class="gaana">
+								<source src="songs/29.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+28)" onmouseleave="reset_padding(1+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+28)" onmouseleave="reset_padding(1+28)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1+28)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+28)"></img>
+							<audio onended="newsong(30)" class="gaana">
+								<source src="songs/30.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+28)" onmouseleave="reset_padding(2+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+28)" onmouseleave="reset_padding(2+28)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2+28)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+28)"></img>
+							<audio onended="newsong(31)" class="gaana">
+								<source src="songs/31.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+28)" onmouseleave="reset_padding(3+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+28)" onmouseleave="reset_padding(3+28)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+28)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+28)"></img>
+							<audio onended="newsong(32)" class="gaana">
+								<source src="songs/32.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+28)" onmouseleave="reset_padding(4+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+28)" onmouseleave="reset_padding(4+28)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4+28)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4+28)"></img>
+							<audio onended="newsong(33)" class="gaana">
+								<source src="songs/33.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+28)" onmouseleave="reset_padding(5+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+28" onmouseleave="reset_padding(5+28)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+28)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+28)"></img>
+							<audio onended="newsong(34)" class="gaana">
+								<source src="songs/34.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+28)" onmouseleave="reset_padding(6+28)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+28)" onmouseleave="reset_padding(6+28)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+28)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+28)"></img>
+							<audio onended="newsong(35)" class="gaana">
+								<source src="songs/35.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!--6 part -->
+				
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (f)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+35)" onmouseleave="reset_padding(0+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+35)" onmouseleave="reset_padding(0+35)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0+35)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+35)"></img>
+							<audio onended="newsong(36)" class="gaana">
+								<source src="songs/36.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+35)" onmouseleave="reset_padding(1+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+35)" onmouseleave="reset_padding(1+35)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1+35)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+35)"></img>
+							<audio onended="newsong(37)" class="gaana">
+								<source src="songs/37.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+35)" onmouseleave="reset_padding(2+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+35)" onmouseleave="reset_padding(2+35)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2+35)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+35)"></img>
+							<audio onended="newsong(38)" class="gaana">
+								<source src="songs/38.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+35)" onmouseleave="reset_padding(3+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+35)" onmouseleave="reset_padding(3+35)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+35)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+35)"></img>
+							<audio onended="newsong(39)" class="gaana">
+								<source src="songs/39.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+35)" onmouseleave="reset_padding(4+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+35)" onmouseleave="reset_padding(4+35)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4+35)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4+35)"></img>
+							<audio onended="newsong(40)" class="gaana">
+								<source src="songs/40.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+35)" onmouseleave="reset_padding(5+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+35" onmouseleave="reset_padding(5+35)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+35)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+35)"></img>
+							<audio onended="newsong(41)" class="gaana">
+								<source src="songs/41.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+35)" onmouseleave="reset_padding(6+35)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+35)" onmouseleave="reset_padding(6+35)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+35)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+35)"></img>
+							<audio onended="newsong(42)" class="gaana">
+								<source src="songs/42.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				<!--7 part -->
+				
+				
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (g)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+42)" onmouseleave="reset_padding(0+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+42)" onmouseleave="reset_padding(0+42)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0+42)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+42)"></img>
+							<audio onended="newsong(43)" class="gaana">
+								<source src="songs/43.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+42)" onmouseleave="reset_padding(1+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+42)" onmouseleave="reset_padding(1+42)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1+42)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+42)"></img>
+							<audio onended="newsong(44)" class="gaana">
+								<source src="songs/44.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+42)" onmouseleave="reset_padding(2+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+42)" onmouseleave="reset_padding(2+42)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2+42)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+42)"></img>
+							<audio onended="newsong(45)" class="gaana">
+								<source src="songs/45.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+42)" onmouseleave="reset_padding(3+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+42)" onmouseleave="reset_padding(3+42)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+42)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+42)"></img>
+							<audio onended="newsong(46)" class="gaana">
+								<source src="songs/46.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+42)" onmouseleave="reset_padding(4+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+42)" onmouseleave="reset_padding(4+42)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4+42)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4+42)"></img>
+							<audio onended="newsong(47)" class="gaana">
+								<source src="songs/47.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+42)" onmouseleave="reset_padding(5+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+42)" onmouseleave="reset_padding(5+42)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+42)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+42)"></img>
+							<audio onended="newsong(48)" class="gaana">
+								<source src="songs/48.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+42)" onmouseleave="reset_padding(6+42)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+42)" onmouseleave="reset_padding(6+42)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+42)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+42)"></img>
+							<audio onended="newsong(49)" class="gaana">
+								<source src="songs/49.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+				
+				
+				<!--8 part -->
+				
+					
+				<div class="songs" style="display:none;">
+						<div class="songwaste">
+							<h1 >Spotify ~ PlayList Part (h)</h1>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(0+49)" onmouseleave="reset_padding(0+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(0+49)" onmouseleave="reset_padding(0+49)">STAY(With Justin Biber)</p>
+							<img class="play" src="images/play.png" onclick="play(0+49)"></img>
+							<img class="pause" src="images/pause.png" onclick="pause(0+49)"></img>
+							<audio onended="newsong(50)" class="gaana">
+								<source src="songs/50.mp3" type="audio/mpeg">
+							</audio>
+						</div>	
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(1+49)" onmouseleave="reset_padding(1+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(1+49)" onmouseleave="reset_padding(1+49)">Bad Habbits</p>
+							<img class="play" src="images/play.png" onclick="play(1+49)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(1+49)"></img>
+							<audio onended="newsong(51)" class="gaana">
+								<source src="songs/51.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(2+49)" onmouseleave="reset_padding(2+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(2+49)" onmouseleave="reset_padding(2+49)">Levitating (feat. DaBaby)</p>
+							<img class="play" src="images/play.png" onclick="play(2+49)" ></img>	
+							<img class="pause" src="images/pause.png" onclick="pause(2+49)"></img>
+							<audio onended="newsong(52)" class="gaana">
+								<source src="songs/52.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(3+49)" onmouseleave="reset_padding(3+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(3+49)" onmouseleave="reset_padding(3+49)">Leave Before You Love Me </p>
+							<img class="play" src="images/play.png" onclick="play(3+49)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(3+49)"></img>
+							<audio onended="newsong(53)" class="gaana">
+								<source src="songs/53.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(4+49)" onmouseleave="reset_padding(4+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(4+49)" onmouseleave="reset_padding(4+49)">Don't Go Yet</p>
+							<img class="play" src="images/play.png" onclick="play(4+49)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(4+49)"></img>
+							<audio onended="newsong(54)" class="gaana">
+								<source src="songs/54.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(5+49)" onmouseleave="reset_padding(5+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(5+49)" onmouseleave="reset_padding(5+49)">Summer of Love (Shwam Mends And Tainy)</p>
+							<img class="play" src="images/play.png" onclick="play(5+49)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(5+49)"></img>
+							<audio onended="newsong(55)" class="gaana">
+								<source src="songs/55.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+						<div class="song" onclick="yes(this);" onmouseover="change_padding(6+49)" onmouseleave="reset_padding(6+49)">
+							<p class="songnames" style="padding:25px 0px;" onmouseover="change_padding(6+49)" onmouseleave="reset_padding(6+49)">Love again</p>
+							<img class="play" src="images/play.png" onclick="play(6+49)" ></img>
+							<img class="pause" src="images/pause.png" onclick="pause(6+49)"></img>
+							<audio onended="newsong(0)" class="gaana">
+								<source src="songs/56.mp3" type="audio/mpeg">
+							</audio>
+						</div>
+										
+				</div>
+					
+				
+				<!--6 part -->
+			 
+			</div>
+			<div class="pagebox">
+				<div class="pages" onclick="playlist(0)">
+					<p>1</p>
+				</div>
+				<div class="pages" onclick="playlist(1)">
+					<p>2</p>
+				</div>
+				<div class="pages" onclick="playlist(2)">
+					<p>3</p>
+				</div>
+				<div class="pages" onclick="playlist(3)">
+					<p>4</p>
+				</div>
+				<div class="pages" onclick="playlist(4)">
+					<p>5</p>
+				</div>
+				<div class="pages" onclick="playlist(5)">
+					<p>6</p>
+				</div>
+				<div class="pages" onclick="playlist(6)">
+					<p>7</p>
+				</div>
+				<div class="pages" onclick="playlist(7)">
+					<p>8</p>
+				</div>
+				
+			 
+			</div>
+			
+		</div>
+		<script src="spotify.js"></script>
+	</body>
+</html>
