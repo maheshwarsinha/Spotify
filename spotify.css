@@ -26,7 +26,7 @@ body{
 	border-top: none; 
 	border-left: none; 
 	border-right: none;
-	caret-color:transparent;
+	caret-color:orange;
 	font-size:20px;
 	background-color: transparent;
     border-bottom: 3px solid green;
@@ -66,7 +66,7 @@ body{
 	background-color: transparent;
     height: inherit;
     margin: auto;
-    width: 74%;
+    width: 59%;
     z-index: -1;
 }
 
@@ -136,9 +136,10 @@ body{
 .pagebox{
 	background-color: transparent;
     height: 20px;
-    width: 200px;
+    width: 220px;
 	margin:auto;
     text-align: center;
+	transition-duration:1s;
 }
 .pages{
 	caret-color:transparent;
@@ -157,4 +158,47 @@ body{
 }
 .pages:hover{
 	border:1px solid green;
+}
+
+#suggestions{
+	position: relative;
+    width: 385px;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    float: right;
+    top: 66px;
+    left: 1085px;
+    flex-wrap: wrap;
+    margin-top: -5px;
+    z-index: 1;
+}
+#suggestions > div{
+	background-color: transparent;
+    height: 35px;
+    width: inherit;
+    margin-top: 5px;
+    border-right: 5px solid yellow;
+    color: white;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    transition-duration: 1s;
+    font-size: 16px;
+	overflow: hidden;
+	background-image: linear-gradient(to right, #545454 , transparent);
+}
+#suggestions > div:hover{
+	transition-duration: 1s;
+	border-right: 5px solid orange;
+	
+	
+}
+.crossicon{
+	height: 10px;
+    float: right;
+    position: relative;
+    left: 1079px;
+    top: 44px;
+	cursor:hand;
+	display:none;
 }
