@@ -5,8 +5,11 @@
 		</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="spotify.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 		</head>
-	<body style="overflow:hidden;font-family:arial;" >	
+	<body id="body" style="overflow:hidden;font-family:arial;" >	
 		<div class="container">
 			<div class="navbar">
 				<div class="navitems">
@@ -16,11 +19,13 @@
 					<p onclick="playlist(0)"> Home</p>
 				</div>
 				<div class="navitems">
-					<p> PlayList</p>
+					<p onclick="activeplaylist()"> PlayList</p>
 				</div>
 				<div class="navitems_searchbar">					
-					<input id="search" autocomplete="off" type="text" spellcheck="false"  placeholder="Search" style="padding-left: 12px;"></input>					
+					<input id="search" autocomplete="off" type="text" spellcheck="false"  placeholder="Search" style="padding-left: 12px;font-family: 'Courgette', cursive;"></input>					
+					<img class="crossicon" src="images/cross.jpg"></img>
 				</div>
+				<div id="suggestions"></div>
 			</div>
 			
 			<div class="playlist">
@@ -547,10 +552,14 @@
 					
 				
 				<!--6 part -->
+				
+				<div class="seekbar">
+					<!-- under construction-->
+				</div>
 			 
 			</div>
 			<div class="pagebox">
-				<div class="pages" onclick="playlist(0)">
+				<div style="height:21px;width:25px;top:-6px;border:2px solid green;" class="pages" onclick="playlist(0)">
 					<p>1</p>
 				</div>
 				<div class="pages" onclick="playlist(1)">
