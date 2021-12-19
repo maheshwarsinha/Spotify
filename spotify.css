@@ -6,10 +6,12 @@
 }
 body{
 	background-image: url(images/backgound.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 .navbar{
 	caret-color:transparent;
-	height:100px;
+	height:93px;
 	width:100%;
 }
 .navitems{
@@ -83,7 +85,7 @@ body{
 	position:relative;
 	margin-left:5px;
 	margin-right:5px;
-	height:70px;
+	height:29px;
 	border-radius:100px;
 	transition-duration:1s;
 }
@@ -134,12 +136,14 @@ body{
 	top: 1px;
 }
 .pagebox{
-	background-color: transparent;
+	        background-color: transparent;
     height: 20px;
     width: 220px;
-	margin:auto;
+    margin: 25px auto;
     text-align: center;
-	transition-duration:1s;
+    transition-duration: 1s;
+    position: relative;
+    top: -107px;
 }
 .pages{
 	caret-color:transparent;
@@ -202,3 +206,97 @@ body{
 	cursor:hand;
 	display:none;
 }
+
+#songproperties
+{
+	    position: relative;
+    background-color: transparent;
+    height: 98px;
+    width: 1920px;
+    top: -76px;
+}
+#songprogress
+{
+	
+	width:100vw;
+	cursor:hand;
+	
+}
+.playpauseseekbar
+{
+	height: 50px;
+    border-radius: 28px;
+    width: 50px;
+    margin: 3px auto;
+    display: flex;
+	cursor:hand;
+	transition-duration:1s;
+	
+}
+#loop
+{
+	height: 40px;
+    width: 40px;
+    display: flex;
+    margin-top: -51px;
+    float: left;
+    cursor: hand;
+    transition-duration: 1s;
+    margin-left: 40px;
+}
+#volume
+{
+	display: flex;
+    float: right;
+    margin-top: -39px;
+    width: 64px;
+    margin-right: 35px;
+	cursor:hand;
+	transition-duration:1s;
+}
+.volumeimage
+{
+	height: 40px;
+    width: 40px;
+    background: transparent;
+    float: right;
+    margin-top: -51px;
+    margin-right: 111px;
+	cursor:hand;
+	transition-duration:1s;
+}
+#forwardb
+{
+	height: 50px;
+    width: 50px;
+    display: flex;
+    margin-left: 993px;
+    margin-top: -50px;
+	
+	cursor:hand;
+}
+
+
+#backwardb
+{
+	height: 50px;
+    width: 50px;
+    display: flex;
+    margin-left: 875px;
+    margin-top: -72px;
+	cursor:hand;
+}
+@keyframes spin{
+	100%{
+		transform:rotate(360deg);
+	}
+}
+.songgif{
+    position: absolute;
+    width: 387px;
+    height: 617px;
+    top: 154px;
+    left: 1px;
+	display:none;
+}
+
