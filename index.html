@@ -27,7 +27,8 @@
 				</div>
 				<div id="suggestions"></div>
 			</div>
-			
+			<div><img class="songgif" src="images/song.gif"></img></div>
+			<div><img class="songgif" style="float: left; left: 1533px;" src="images/song.gif"></img></div>
 			<div class="playlist">
 					
 				<div class="songs">
@@ -550,14 +551,24 @@
 										
 				</div>
 					
-				
-				<!--6 part -->
-				
-				<div class="seekbar">
-					<!-- under construction-->
 				</div>
+				<div id="songproperties"  style="display:none;">
+					<div><input  id="songprogress" type="range" max="100" min="1"></input></div>
+					<div ><img class="playpauseseekbar" style="display:none;" src="images/play.png"></img></div>
+					<div ><img class="playpauseseekbar" src="images/pause.png"></img></div>
+					<div><img id="loop" src="images/loop.jpg"></img></div>
+					<div>
+						<img src="images/volumeimage.jpg" class="volumeimage"></img>
+						<<img src="images/volumemimage.jpg" alt="volume" style="display:none;" class="volumeimage"></img>
+						<input  id="volume" type="range" max="100" min="0"></input>
+					</div>
+					<div><img src="images/backward.jpg" id="backwardb"></img></div>
+					<div><img src="images/forward.jpg" id="forwardb"></img></div>
+					
+				</div>
+				
 			 
-			</div>
+			
 			<div class="pagebox">
 				<div style="height:21px;width:25px;top:-6px;border:2px solid green;" class="pages" onclick="playlist(0)">
 					<p>1</p>
@@ -589,5 +600,7 @@
 			
 		</div>
 		<script src="spotify.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>
