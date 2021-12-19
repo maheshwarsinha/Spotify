@@ -47,7 +47,11 @@ function reset_padding(y)
   input.addEventListener("click", function (e)
   {
 	  if(document.getElementById('search').value!="")
-	 document.getElementsByClassName('crossicon')[0].style.display="block";
+	  {
+		  document.getElementsByClassName('crossicon')[0].style.display="block";
+		 document.getElementsByClassName('songgif')[1].style.display="none";
+			document.getElementsByClassName('songgif')[0].style.display="none";
+	  }
   });
   
    function validate(e) {  //to search on spotify website
@@ -106,6 +110,9 @@ function play(x)// Function To Play A Song
 	a[x].style.display="none";
 	a=document.getElementsByClassName('pause');					
 	a[x].style.display="block";
+	document.getElementById('songproperties').style.display="block";
+	document.getElementsByClassName('playpauseseekbar')[0].style.display="none";
+	document.getElementsByClassName('playpauseseekbar')[1].style.display="block";
 	var i;
 	var audio=document.getElementsByClassName('gaana');	
 	
@@ -115,11 +122,20 @@ function play(x)// Function To Play A Song
 		if(i==x)
 		{
 			audio[i].play();
+			document.getElementsByClassName('songgif')[1].style.display="block";
+			document.getElementsByClassName('songgif')[0].style.display="block";
+			document.getElementById('songprogress').value=0;
+			audio[i].volume=document.getElementById('volume').value/100.0;
+			document.getElementById('loop').style.animation="";
 			document.getElementById("search").value="Playing "+document.getElementsByClassName('song')[i].children[0].innerHTML;
 			while(document.getElementById('suggestions').firstChild)
 			{
 				document.getElementById('suggestions').removeChild(document.getElementById('suggestions').firstChild);
 			}
+			audio[i].addEventListener("timeupdate",function(e){
+				seekbar.value=(e.target.currentTime/e.target.duration)*100;
+				
+			});
 		}
 		else
 		{
@@ -140,6 +156,10 @@ function play(x)// Function To Play A Song
 	a[x].style.display="block";
 	a=document.getElementsByClassName('pause');					
 	a[x].style.display="none";
+	document.getElementsByClassName('playpauseseekbar')[1].style.display="none";
+	document.getElementsByClassName('playpauseseekbar')[0].style.display="block";
+	document.getElementsByClassName('songgif')[1].style.display="none";
+			document.getElementsByClassName('songgif')[0].style.display="none";
 	var audio=document.getElementsByClassName('gaana');	
 	audio[x].pause();
 } ;
@@ -242,9 +262,208 @@ crossicon.onclick=function()
 {
 	document.getElementById('search').value="";
 	document.getElementsByClassName('crossicon')[0].style.display="none";
+	while(document.getElementById('suggestions').firstChild)
+			{
+				document.getElementById('suggestions').removeChild(document.getElementById('suggestions').firstChild);
+			}
+};
+
+//tfunction to play pauswe from seek bar
+document.getElementsByClassName('playpauseseekbar')[0].onclick=function()
+{
+	document.getElementsByClassName('playpauseseekbar')[0].style.display="none";
+	document.getElementsByClassName('playpauseseekbar')[1].style.display="block";
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	
+	for(i=0;i<song.length;i++)
+	{
+		if(song[i].currentTime>0)
+		{
+			play(i);
+			break;
+		}
+	}
 }
 
+document.getElementsByClassName('playpauseseekbar')[1].onclick=function ()
+{
+	document.getElementsByClassName('playpauseseekbar')[1].style.display="none";
+	document.getElementsByClassName('playpauseseekbar')[0].style.display="block";
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			pause(i);
+			break;
+		}
+	}
+		
+}
+//---------------------------------------------------------------------------------------------------
+//function to mute unmute and volume control
 
 
-			 
-			 
+document.getElementsByClassName('volumeimage')[0].onclick=function ()
+{
+	document.getElementsByClassName('volumeimage')[0].style.display="none";
+	document.getElementsByClassName('volumeimage')[1].style.display="block";
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			song[i].muted=true;
+			break;
+		}
+	}
+	document.getElementById('volume').value=0;	
+}
+document.getElementById('volume').value=100;
+document.getElementsByClassName('volumeimage')[1].onclick=function ()
+{
+	document.getElementsByClassName('volumeimage')[1].style.display="none";
+	document.getElementsByClassName('volumeimage')[0].style.display="block";
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	
+	for(i=0;i<song.length;i++)
+	{
+		if(song[i].muted)
+		{
+			song[i].muted=false;
+			break;
+		}
+	}
+	document.getElementById('volume').value=50;	
+}
+var volume = document.getElementById('volume');
+volume.addEventListener("change",function(e){
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			song[i].volume=e.target.value/100.0;
+			if(song[i].volume==0)
+			{
+				document.getElementsByClassName('volumeimage')[0].style.display="none";
+				document.getElementsByClassName('volumeimage')[1].style.display="block";
+			}
+			else			
+			{
+				document.getElementsByClassName('volumeimage')[1].style.display="none";
+				document.getElementsByClassName('volumeimage')[0].style.display="block";
+			}
+			break;
+		}
+	}
+
+
+});
+
+//--------------------------------------------------------------------------------------------------
+
+//function to change from suffle to loop or vice versae
+document.getElementById('loop').onclick=function()
+{
+	if(document.getElementById('loop').style.animation==="")
+	{
+		document.getElementById('loop').style.animation="spin 2s linear  infinite";
+		var i;
+		var song = document.getElementsByClassName('gaana');
+		for(i=0;i<song.length;i++)
+		{
+			if(isplaying(song[i]))
+			{
+				song[i].loop=true;
+				break;
+			}
+		}
+	}
+	else
+	{
+		document.getElementById('loop').style.animation="";
+		var i;
+		var song = document.getElementsByClassName('gaana');
+		for(i=0;i<song.length;i++)
+		{
+			if(song[i].loop)
+			{
+				song[i].loop=false;
+				break;
+			}
+		}
+	}
+	
+}
+//--------------------------------------------------------------------------------------
+// function to seek video according to seekbar
+var seekbar = document.getElementById('songprogress');
+var i;var song;
+seekbar.addEventListener("change",function(e)
+{
+	song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			break;
+		}
+	}
+	var seekto = song[i].duration * (seekbar.value/100);
+	song[i].currentTime=seekto;
+});
+//--------------------------------------------------------------------------------------------
+// function to forward or backward using buttons
+document.getElementById('backwardb').onclick=function()
+{
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			if(i==0)
+			{
+				play(0);
+				newsong(0);
+			}
+			else
+			{
+				play(i-1);
+			    newsong(i-1);
+			}
+			break;
+		}
+	}
+	
+}
+
+document.getElementById('forwardb').onclick=function()
+{
+	var i;
+	var song = document.getElementsByClassName('gaana');
+	for(i=0;i<song.length;i++)
+	{
+		if(isplaying(song[i]))
+		{
+			if(i==55)
+			{
+				play(0);
+				newsong(0);
+			}
+			else
+			{
+				play(i+1);
+				newsong(i+1);
+			}
+			break;
+		}
+	}
+	
+}
